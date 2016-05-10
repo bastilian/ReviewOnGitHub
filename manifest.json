@@ -1,0 +1,31 @@
+{
+  "manifest_version": 2,
+  "name": "Review on GitHub",
+  "description": "Review repositories on GitHub like a Pull Request",
+  "version": "1.0",
+  "icons": {
+    "256": "icon.png"
+  },
+  "permissions": [
+    "https://github.com/*"
+  ],
+  "web_accessible_resources": [
+    "lib.js",
+    "db.js",
+    "review.js",
+    "review.css"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://github.com/*"
+      ],
+      "css": [
+        "review.css"
+      ],
+      "js": [
+        "inject.js"
+      ]
+    }
+  ]
+}
