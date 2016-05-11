@@ -10,6 +10,11 @@
     "https://github.com/*"
   ],
   "web_accessible_resources": [
+    "components/notes-button.js",
+    "components/file-view.js",
+    "components/note-form.js",
+    "components/line-note.js",
+    "components/notes-list.js",
     "lib.js",
     "db.js",
     "review.js",

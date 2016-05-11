@@ -13,6 +13,11 @@ chrome.extension.sendMessage({}, function(response) {
 		clearInterval(readyStateCheckInterval);
     inject('lib.js');
     inject('db.js');
+    inject('components/note-form.js');
+    inject('components/line-note.js');
+    inject('components/notes-button.js');
+    inject('components/file-view.js');
+    inject('components/notes-list.js');
     inject('review.js');
 	}
 	}, 10);
