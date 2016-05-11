@@ -1,12 +1,23 @@
 Object.filter = function( obj, predicate) {
     var result = {}, key;
     for (key in obj) {
-        if (obj.hasOwnProperty(key) && !predicate(obj[key])) {
+        if (obj.hasOwnProperty(key) && predicate(obj[key])) {
             result[key] = obj[key];
         }
     }
     return result;
 };
+
+Object.filterByKey = function( obj, predicate) {
+    var result = {}, key;
+    for (key in obj) {
+        if (obj.hasOwnProperty(key) && predicate(key)) {
+            result[key] = obj[key];
+        }
+    }
+    return result;
+};
+
 document.getHTML= function(who, deep){
     if(!who || !who.tagName) return '';
     var txt, ax, el= document.createElement("div");
