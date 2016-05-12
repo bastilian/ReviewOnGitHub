@@ -2,7 +2,7 @@
   "manifest_version": 2,
   "name": "Review on GitHub",
   "description": "Review repositories on GitHub like a Pull Request",
-  "version": "1.0",
+  "version": "1.0.1",
   "icons": {
     "256": "icon.png"
   },
