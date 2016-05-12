@@ -25,7 +25,7 @@ var Db = (function(){
 
   p.find = function (url) {
     return this.notes.filter(function (note) {
-      return note.url.startsWith(url);
+      return note.url == url;
     });
   }
 
