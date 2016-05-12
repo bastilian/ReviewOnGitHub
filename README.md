@@ -1,7 +1,8 @@
-# Review On Github
+# ![](icon.png) Review On Github
 
 A chrome extension that adds the ability to make notes on code and open and issue with all notes on a given repository.
 
+[Install from the Google Chrome Webstore](https://chrome.google.com/webstore/detail/review-on-github/eenlonmglmdookfbknbmcgjkpomndjdp)
 
 ## License
 
