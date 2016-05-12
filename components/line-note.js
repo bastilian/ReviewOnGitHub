@@ -10,11 +10,7 @@ var LineNote = (function(){
     this.form              = null;
     this.note              = null;
 
-    this.db.loaded(function () {
-      this.render();
-    }.bind(this))
-
-    this.db.updated(function () {
+    this.db.loadedOrUpated(function () {
       this.render();
     }.bind(this))
 	}
@@ -28,7 +24,10 @@ var LineNote = (function(){
   }
 
   p.renderNoteLink = function () {
-    this.noteLink.appendChild(addSvg())
+    var plus = addSvg();
+    plus.classList.add('add-line-comment');
+    plus.classList.add('review-note')
+    this.noteLink.appendChild(plus)
 
     this.lineNumberElement.addEventListener('mouseover', function () {
       this.noteLink.firstChild.style.opacity = 1;
@@ -39,6 +38,7 @@ var LineNote = (function(){
     }.bind(this));
 
     this.noteLink.addEventListener('click', function () {
+      location.hash = this.line();
       this.openForm();
     }.bind(this))
 
@@ -91,6 +91,8 @@ var LineNote = (function(){
 
   p.addEditAndDelete = function () {
     var div = el('div');
+    div.classList.add('note-actions');
+
     var editButton = el('button');
     editButton.setAttribute('class', 'btn-link');
     editButton.appendChild(editSvg());

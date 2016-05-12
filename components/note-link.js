@@ -34,7 +34,6 @@ var NoteLink = (function(){
   }
 
   p.insert = function () {
-    console.log(this.actions);
     this.actions.appendChild(this.elm);
   }
 

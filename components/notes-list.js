@@ -30,12 +30,16 @@ var NotesList = (function(){
 
   p.render = function () {
     this.container.innerHTML = '';
-
-    for (var key in this.db.notes) {
-      if (this.db.notes.hasOwnProperty(key)) {
-        this.container.appendChild(this.renderNote(key, this.db.notes[key]))
+    if (this.db.notes.length > 0) {
+      for (var key in this.db.notes) {
+        if (this.db.notes.hasOwnProperty(key)) {
+          this.container.appendChild(this.renderNote(key, this.db.notes[key]))
+        }
       }
+    } else {
+      this.container.innerHTML = marked('_No Notes yet. Add Notes to lines in a file!_')
     }
+
   }
 
 	return C;

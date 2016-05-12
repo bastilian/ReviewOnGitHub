@@ -16,6 +16,10 @@ var ReviewOnGithub = (function(){
       this.notesList = new NotesList(this.db);
     }
 
+    if (document.querySelectorAll('.new-issue-form .form-actions')[0]) {
+      this.noteLink = new NoteLink(this.db);
+    }
+
     this.db.load();
     this.observePJaxLoads();
   }

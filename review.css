@@ -1,5 +1,32 @@
 .reviewsongithub-comment-container td {
+  position: relative;
   padding: 10px;
   border-top: 1px solid #eee;
   border-bottom: 1px solid #eee;
+}
+.reviewsongithub-comment-container textarea {
+  width: 100%;
+  margin-bottom: 1em;
+}
+
+.review-note {
+  margin-right: -20px !important;
+  float: right !important;
+}
+
+.note-actions {
+  position: absolute;
+  text-align: right;
+  right: 10px;
+  top: 10px;
+}
+
+.note-actions button {
+  margin: 0 .5em;
+  color: inherit;
+  opacity: .5;
+}
+
+.note-actions button:hover {
+  opacity: 1
 }
