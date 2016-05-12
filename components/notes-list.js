@@ -19,7 +19,7 @@ var NotesList = (function(){
     note.classList.add('commit-tease');
     body.classList.add('commit-tease-contributors');
 
-    header.innerHTML = '<a href="' + url + '">' + url + '</a>';
+    header.innerHTML = '<a href="' + noteObj.url + '">' + noteObj.url + '</a>';
     body.innerHTML = marked(noteObj.body);
 
     note.appendChild(header);

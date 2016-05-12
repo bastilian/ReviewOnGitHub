@@ -86,7 +86,6 @@ var LineNote = (function(){
     var really = confirm('Do you really want to remove the note for line ' +  this.line() + '?');
     if (really) {
       this.db.remove(this.lineNoteKey());
-      this.note = null;
     }
   }
 
@@ -114,7 +113,7 @@ var LineNote = (function(){
   }
 
   p.render = function () {
-    this.note = this.db.find(this.lineNoteKey())[this.lineNoteKey()];
+    this.note = this.db.find(this.lineNoteKey())[0];
     this.noteContainer.innerHTML = '';
 
     if (this.note) {
