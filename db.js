@@ -25,7 +25,6 @@ var Db = (function(){
   }
 
   p.remove = function (url) {
-    console.log('remove');
     delete this.notes[url];
     this.save();
   }
