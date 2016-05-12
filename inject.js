@@ -11,6 +11,7 @@ chrome.extension.sendMessage({}, function(response) {
 	var readyStateCheckInterval = setInterval(function() {
 	if (document.readyState === "complete") {
 		clearInterval(readyStateCheckInterval);
+    inject('vendor/marked.min.js');
     inject('lib.js');
     inject('db.js');
     inject('components/note-form.js');

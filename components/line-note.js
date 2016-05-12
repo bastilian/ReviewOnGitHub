@@ -60,15 +60,15 @@ var LineNote = (function(){
 
   p.renderNote = function () {
     var td  = el('td');
-    var p   = el('p');
+    var div = el('div');
     var row = this.lineNumberElement.parentNode;
 
     td.setAttribute('class', 'line-comments');
     td.setAttribute('colspan', '3');
 
     if (this.note && !td.querySelectorAll('p')[0]) {
-      p.textContent = this.note.body;
-      td.appendChild(p);
+      div.innerHTML = marked(this.note.body);
+      td.appendChild(div);
     }
 
     this.noteContainer.setAttribute('class', 'reviewsongithub-comment-container');

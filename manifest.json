@@ -10,6 +10,7 @@
     "https://github.com/*"
   ],
   "web_accessible_resources": [
+    "vendor/marked.min.js",
     "components/notes-button.js",
     "components/file-view.js",
     "components/note-form.js",
