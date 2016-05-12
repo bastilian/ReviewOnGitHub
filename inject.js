@@ -14,6 +14,7 @@ chrome.extension.sendMessage({}, function(response) {
     inject('vendor/marked.min.js');
     inject('lib.js');
     inject('db.js');
+    inject('components/note-link.js');
     inject('components/note-form.js');
     inject('components/line-note.js');
     inject('components/notes-button.js');

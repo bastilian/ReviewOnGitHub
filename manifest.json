@@ -12,6 +12,7 @@
   "web_accessible_resources": [
     "vendor/marked.min.js",
     "components/notes-button.js",
+    "components/note-link.js",
     "components/file-view.js",
     "components/note-form.js",
     "components/line-note.js",
