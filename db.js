@@ -48,12 +48,23 @@ var Db = (function(){
     })
   }
 
-  p.save = function () {
+  p.addOrUpdate = function (url, body, options) {
+    var existingNote = this.find(url)[0];
+    if (existingNote) {
+      this.remove(url);
+    }
+    this.add(url, body, options);
+  }
+
+  p.save = function (fn) {
     localStorage.setItem(this.dbName, JSON.stringify(this.notes));
 
     for (var i = 0; i < this._updatedCallbacks.length; i++) {
       this._updatedCallbacks[i]();
     }
+
+    if (fn)
+      fn();
   }
 
   p.load = function () {
