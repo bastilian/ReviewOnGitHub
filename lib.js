@@ -62,7 +62,7 @@ window.svg = function (classes, height, width) {
 }
 
 window.addSvg = function () {
-  var elm = svg('octicon octicon-plus add-line-comment', 16, 12);
+  var elm = svg('octicon octicon-plus', 16, 12);
   var path = document.createElementNS (xmlns, 'path');
   path.setAttribute('d', 'M12 9H7v5H5V9H0V7h5V2h2v5h5v2z');
   elm.appendChild(path);
@@ -70,7 +70,7 @@ window.addSvg = function () {
 }
 
 window.editSvg = function () {
-  var elm = svg('octicon octicon-pencil', 16, 12);
+  var elm = svg('octicon octicon-pencil', 16, 14);
   var path = document.createElementNS (xmlns, 'path');
   path.setAttribute('d', 'M0 12v3h3l8-8-3-3L0 12z m3 2H1V12h1v1h1v1z m10.3-9.3l-1.3 1.3-3-3 1.3-1.3c0.39-0.39 1.02-0.39 1.41 0l1.59 1.59c0.39 0.39 0.39 1.02 0 1.41z');
   elm.appendChild(path);
