@@ -11,7 +11,6 @@ var NotesList = (function(){
     }.bind(this))
 	}
 
-
   p.renderNote = function (url, noteObj) {
     var note   = el('div');
     var header = el('div');
@@ -20,7 +19,7 @@ var NotesList = (function(){
     note.classList.add('commit-tease');
     body.classList.add('commit-tease-contributors');
 
-    header.textContent = url;
+    header.innerHTML = '<a href="' + url + '">' + url + '</a>';
     body.textContent = noteObj.body
 
     note.appendChild(header);
